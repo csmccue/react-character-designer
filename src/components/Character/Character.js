@@ -3,7 +3,6 @@ import React from 'react';
 import './Character.css';
 
 export default function Character({ top, mid, bot }) {
-  console.log(mid);
   return (
     <>
       <div className="character">

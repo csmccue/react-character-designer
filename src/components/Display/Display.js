@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Display.css';
 
-export default function Display({ catchphrase, setCatchphrase }) {
+export default function Display({ catchphrase }) {
   // implement a Preview screen here
   //  Note - the HTML should have the following structure
   //  the main div should have a class of preview and the font-name prop
