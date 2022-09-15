@@ -1,4 +1,22 @@
 import React from 'react';
 import { useState } from 'react';
 
-//woops
+import Character from '../Character/Character';
+import Controls from '../Controls/Controls';
+// import Display from '../Display/Display';
+
+import './Main.css';
+
+export default function Home() {
+  const [top, setTop] = useState('duck'); 
+  const [mid, setMid] = useState('blue');
+  const [bot, setBot] = useState('leg');
+
+  return (
+    <main>
+      <Character top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} />
+      <Controls top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} />
+      {/* <Display top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} /> */}
+    </main>
+  );
+}
