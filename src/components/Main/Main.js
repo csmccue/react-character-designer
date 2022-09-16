@@ -12,14 +12,39 @@ export default function Home() {
   const [top, setTop] = useState('duck'); 
   const [mid, setMid] = useState('blue');
   const [bot, setBot] = useState('leg');
+  const [topCount, setTopCount] = useState(0); 
+  const [midCount, setMidCount] = useState(0);
+  const [botCount, setBotCount] = useState(0);
   const [catchphrase, setCatchphrase] = useState('');
+  const [catchphraseArray, setCatchphraseArray] = useState([]);
 
+  function addCatchphrase(catchphrase) {
+    setCatchphraseArray(prevCatchphrase => [...prevCatchphrase, catchphrase]);
+    setCatchphrase('');
+  }
+
+  function incrementTop() {
+    setTopCount((prevTopCount)=> prevTopCount + 1) ;
+  }
+  function incrementMid() {
+    setMidCount((prevMidCount)=> prevMidCount + 1) ;
+  }
+  function incrementBot() {
+    setBotCount((prevBotCount)=> prevBotCount + 1) ;
+  }
   return (
     <main>
+
       <Character top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} />
-      <Controls top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} />
-      <Catchphrase catchphrase={catchphrase} setCatchphrase={setCatchphrase} />
-      <Display catchphrase={catchphrase} setCatchphrase={setCatchphrase} />
+      <Controls top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} incrementTop={incrementTop} incrementMid={incrementMid} incrementBot={incrementBot} />
+      <Catchphrase catchphrase={catchphrase} setCatchphrase={setCatchphrase} addCatchphrase={addCatchphrase} />
+      <Display catchphrase={catchphrase} catchphraseArray={catchphraseArray} />
+      <div>
+        <h1>{'Youve changed top ' + topCount + ' times'}</h1>
+        <h1>{'Youve changed mid ' + midCount + ' times'}</h1>
+        <h1>{'Youve changed bot ' + botCount + ' times'}</h1>
+      </div>
+
     </main>
   );
 }
