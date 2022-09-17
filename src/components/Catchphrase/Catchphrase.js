@@ -10,8 +10,8 @@ export default function Catchphrase({ catchphrase, setCatchphrase, addCatchphras
     <div className="catchphrase">
       <div className="form-control">
         <input type="text" value={catchphrase} onChange={(e) => setCatchphrase(e.target.value)} />
-        <label htmlFor="catchphrase">Catchphrase</label>
-        <button id="catchphrase-button" value={catchphrase} onClick={(e) => addCatchphrase(e.target.value)}>Add</button>
+        <label htmlFor="catchphrase"></label>
+        <button id="catchphrase-button" value={catchphrase} onClick={(e) => addCatchphrase(e.target.value)}>Order</button>
       </div>
     </div>
   );

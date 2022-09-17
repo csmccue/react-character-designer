@@ -9,9 +9,9 @@ import Display from '../Display/Display';
 import './Main.css';
 
 export default function Home() {
-  const [top, setTop] = useState('duck'); 
-  const [mid, setMid] = useState('blue');
-  const [bot, setBot] = useState('leg');
+  const [top, setTop] = useState('black-cherry-blitz'); 
+  const [mid, setMid] = useState('chips-and-salsa');
+  const [bot, setBot] = useState('oldtimer-with-cheese');
   const [topCount, setTopCount] = useState(0); 
   const [midCount, setMidCount] = useState(0);
   const [botCount, setBotCount] = useState(0);
@@ -34,17 +34,21 @@ export default function Home() {
   }
   return (
     <main>
-
-      <Character top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} />
-      <Controls top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} incrementTop={incrementTop} incrementMid={incrementMid} incrementBot={incrementBot} />
-      <Catchphrase catchphrase={catchphrase} setCatchphrase={setCatchphrase} addCatchphrase={addCatchphrase} />
-      <Display catchphrase={catchphrase} catchphraseArray={catchphraseArray} />
-      <div>
-        <h1>{'You have changed top ' + topCount + ' times'}</h1>
-        <h1>{'You have changed mid ' + midCount + ' times'}</h1>
-        <h1>{'You have changed bot ' + botCount + ' times'}</h1>
+      <div className='chilis'>
+        <h1>🌶️ Welcome To Chilis! 🌶️</h1>
+        <h1>🌶️ Please Select Your 3 For Me Combo 🌶️</h1>
       </div>
-
+      <container>
+        <Character top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} />
+        <Controls top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} incrementTop={incrementTop} incrementMid={incrementMid} incrementBot={incrementBot} />
+        <Catchphrase catchphrase={catchphrase} setCatchphrase={setCatchphrase} addCatchphrase={addCatchphrase} />
+        <Display catchphrase={catchphrase} catchphraseArray={catchphraseArray} />
+        <div>
+          <h1>{'You have your mind about your beverage ' + topCount + ' times'}</h1>
+          <h1>{'You have your mind about your entree ' + midCount + ' times'}</h1>
+          <h1>{'You have your mind about your dessert ' + botCount + ' times'}</h1>
+        </div>
+      </container>
     </main>
   );
 }

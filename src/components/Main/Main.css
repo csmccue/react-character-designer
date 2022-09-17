@@ -1,11 +1,24 @@
 main {
   display: grid;
+  grid-template-rows: .1fr .9fr;
+  grid-template-columns: .05fr 0.9fr.05fr;
+  justify-content: space-around;
+
+}
+
+container {
+  display: grid;
+  grid-template-rows: 0.1fr 0.9 fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'controls character';
   grid-gap: 20px;
-  /* height: calc(100vh - 80px); */
+
 }
 
-main img {
-  width: 100px
+container img {
+  width: 500px
+}
+
+chilis {
+  font-size: 20px;
 }

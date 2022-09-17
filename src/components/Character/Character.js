@@ -7,13 +7,13 @@ export default function Character({ top, mid, bot }) {
     <>
       <div className="character">
         <h1>
-          <img src={`${process.env.PUBLIC_URL}/characters/${top}-head.png`} />
+          <img src={`${process.env.PUBLIC_URL}/characters/${top}-bev.png`} />
         </h1>
         <h1>
-          <img src={`${process.env.PUBLIC_URL}/characters/${mid}-middle.png`} />
+          <img src={`${process.env.PUBLIC_URL}/characters/${mid}-app.png`} />
         </h1>
         <h1>
-          <img src={`${process.env.PUBLIC_URL}/characters/${bot}-pants.png`} />
+          <img src={`${process.env.PUBLIC_URL}/characters/${bot}-entree.png`} />
         </h1>
       </div>  
     </>
