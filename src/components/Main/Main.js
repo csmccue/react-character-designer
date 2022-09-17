@@ -40,9 +40,9 @@ export default function Home() {
       <Catchphrase catchphrase={catchphrase} setCatchphrase={setCatchphrase} addCatchphrase={addCatchphrase} />
       <Display catchphrase={catchphrase} catchphraseArray={catchphraseArray} />
       <div>
-        <h1>{'Youve changed top ' + topCount + ' times'}</h1>
-        <h1>{'Youve changed mid ' + midCount + ' times'}</h1>
-        <h1>{'Youve changed bot ' + botCount + ' times'}</h1>
+        <h1>{'You have changed top ' + topCount + ' times'}</h1>
+        <h1>{'You have changed mid ' + midCount + ' times'}</h1>
+        <h1>{'You have changed bot ' + botCount + ' times'}</h1>
       </div>
 
     </main>
