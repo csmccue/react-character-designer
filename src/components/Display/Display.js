@@ -13,10 +13,3 @@ export default function Display({ catchphraseArray }) {
     </div>
   );
 }
-
-
-// {
-//   articles.map((article) => (
-//     <MyAmazingArticle caption={article.title} color={article.background} />
-//   ));
-// }
