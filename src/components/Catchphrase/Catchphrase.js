@@ -9,12 +9,12 @@ export default function Catchphrase({ catchphrase, setCatchphrase, addCatchphras
   return (
     <div className="catchphrase">
       <div className="form-control">
-        <input type="text" value={catchphrase} onChange={(e) => setCatchphrase(e.target.value)} />
+        <input type="text" value={catchphrase} placeholder = "Order Number" onChange={(e) => setCatchphrase(e.target.value)} />
         <label htmlFor="catchphrase"></label>
         <button id="catchphrase-button" value={catchphrase} onClick={(e) => {
           addCatchphrase(e.target.value);
           addMenuItems(top, mid, bot);
-        }}>Order</button>
+        }}>Submit Order</button>
       </div>
     </div>
   );
