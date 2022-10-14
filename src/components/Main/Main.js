@@ -17,10 +17,14 @@ export default function Home() {
   const [botCount, setBotCount] = useState(0);
   const [catchphrase, setCatchphrase] = useState('');
   const [catchphraseArray, setCatchphraseArray] = useState([]);
+  const [menuItemsArray, setMenuItemsArray] = useState([]);
 
   function addCatchphrase(catchphrase) {
     setCatchphraseArray(prevCatchphrase => [...prevCatchphrase, catchphrase]);
     setCatchphrase('');
+  }
+  function addMenuItems(top, mid, bot) {
+    setMenuItemsArray(prevMenuItems => [...prevMenuItems, top, mid, bot]);
   }
 
   function incrementTop() {
@@ -41,8 +45,8 @@ export default function Home() {
       <container>
         <Character top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} />
         <Controls top={top} setTop={setTop} mid={mid} setMid={setMid} bot={bot} setBot={setBot} incrementTop={incrementTop} incrementMid={incrementMid} incrementBot={incrementBot} />
-        <Catchphrase catchphrase={catchphrase} setCatchphrase={setCatchphrase} addCatchphrase={addCatchphrase} />
-        <Display catchphrase={catchphrase} catchphraseArray={catchphraseArray} />
+        <Catchphrase addMenuItems={addMenuItems} top={top} mid={mid} bot={bot} menuItemsArray={menuItemsArray} setMenuItemsArray={setMenuItemsArray} catchphrase={catchphrase} setCatchphrase={setCatchphrase} addCatchphrase={addCatchphrase} />
+        <Display menuItemsArray={menuItemsArray} setMenuItemsArray={setMenuItemsArray} catchphrase={catchphrase} catchphraseArray={catchphraseArray} />
         <div>
           <h1>{'You have your mind about your beverage ' + topCount + ' times'}</h1>
           <h1>{'You have your mind about your entree ' + midCount + ' times'}</h1>

@@ -5,15 +5,15 @@ import './Character.css';
 export default function Character({ top, mid, bot }) {
   return (
     <>
-      <div className="character">
+      <div>
         <h1>
-          <img src={`${process.env.PUBLIC_URL}/characters/${top}-bev.png`} />
+          <img className="character" src={`${process.env.PUBLIC_URL}/characters/${top}-bev.png`} />
         </h1>
         <h1>
-          <img src={`${process.env.PUBLIC_URL}/characters/${mid}-app.png`} />
+          <img className="character" src={`${process.env.PUBLIC_URL}/characters/${mid}-app.png`} />
         </h1>
         <h1>
-          <img src={`${process.env.PUBLIC_URL}/characters/${bot}-entree.png`} />
+          <img className="character" src={`${process.env.PUBLIC_URL}/characters/${bot}-entree.png`} />
         </h1>
       </div>  
     </>

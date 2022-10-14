@@ -3,7 +3,7 @@ import './Catchphrase.css';
 
 
 
-export default function Catchphrase({ catchphrase, setCatchphrase, addCatchphrase }) {
+export default function Catchphrase({ catchphrase, setCatchphrase, addCatchphrase, addMenuItems, top, mid, bot }) {
 
   
   return (
@@ -11,7 +11,10 @@ export default function Catchphrase({ catchphrase, setCatchphrase, addCatchphras
       <div className="form-control">
         <input type="text" value={catchphrase} onChange={(e) => setCatchphrase(e.target.value)} />
         <label htmlFor="catchphrase"></label>
-        <button id="catchphrase-button" value={catchphrase} onClick={(e) => addCatchphrase(e.target.value)}>Order</button>
+        <button id="catchphrase-button" value={catchphrase} onClick={(e) => {
+          addCatchphrase(e.target.value);
+          addMenuItems(top, mid, bot);
+        }}>Order</button>
       </div>
     </div>
   );
