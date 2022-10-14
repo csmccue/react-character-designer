@@ -11,3 +11,5 @@ export default function Display({ catchphraseArray, menuItemsArray }) {
     </div>
   );
 }
+
+// test
