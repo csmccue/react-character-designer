@@ -1,0 +1,5 @@
+.character {
+  grid-area: character;
+  max-height: 500px;
+  max-width: 200px;
+}
